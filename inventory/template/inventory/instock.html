@@ -1,0 +1,32 @@
+{% extends 'inventory/base.html'%}
+
+
+{% block content %}
+<div class="container">  
+    <center>        
+    <form method="POST">
+        {%csrf_token%}        
+            <div style="margin-top: 20px; margin-bottom: 20px">
+                <img src="../media/images/instock1.jpg" width="200">
+                
+            </div>
+            <h4 >รับเข้าสินค้า</h4>
+            <div class="form-group row justify-content-center">
+                <label for="location" class="col-1 col-form-label">Location</label>
+                <div class="col-4">
+                    <input type="text" readonly class="form-control" id="location" value="">
+                </div>
+            </div>
+            <div class="form-group row justify-content-center">
+                <label for="barcode" class="col-1 col-form-label">Barcode</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="barcode" value="">
+                </div>
+            </div>
+           <button type = "submit" class="btn btn-primary">ยืนยัน</button>
+      </form>
+    </center>     
+</div> 
+
+{% endblock content%}
+
